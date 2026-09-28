@@ -1,0 +1,34 @@
+#include <linux/init.h>
+#include <linux/module.h>
+#include <linux/kernel.h>
+#include <linux/sched.h>
+#include <linux/sched/task.h>
+#include <linux/list.h>
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("ssh1131");
+MODULE_DESCRIPTION("enumerating children");
+
+static int __init trace_children_init(void) {
+    struct task_struct *task;
+    struct list_head *list;
+    int count = 0; 
+
+    pr_info("=== BAT DAU ENUMERATING CHILDREN ===\n");
+
+    list_for_each(list, &current->children) {
+        task = list_entry(list, struct task_struct, sibling);
+        pr_info("  -> %s [PID: %d]\n", task->comm, task->pid);
+        count++;
+    }
+
+    pr_info("Child count: %d\n", count);
+    return 0;
+}
+
+static void __exit trace_children_exit(void) {
+    pr_info("=== THOAT ENUMERATING CHILDREN ===\n");
+}
+
+module_init(trace_children_init);
+module_exit(trace_children_exit);
