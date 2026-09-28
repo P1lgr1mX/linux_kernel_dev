@@ -1,0 +1,6 @@
+static inline giup toi uu hieu nang do chen dc asm 
+example: rdtsc 
+
+likely(x) 
+unlikely(x) 
+Thời gian thực thi (Runtime) — GIẢM ĐÁNG KỂ (Chương trình chạy nhanh hơn)
