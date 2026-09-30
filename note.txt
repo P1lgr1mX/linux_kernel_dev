@@ -16,3 +16,6 @@ vfork() giong fork() nhung bang ko bi sao chep , tien trinh con chay trong tien 
 
 process termination (cham dut tien trinh)
 bat co thoat , huy bo dem thoi gian , giai phong bo nho , huy ket noi ipc , dong tep , luu ma thoat  , bao cao trang thai 
+
+chapter 4 
+bo lap lich => quyet dinh cai gi hoat dong truoc , de khong co cai gi bi lang phi
