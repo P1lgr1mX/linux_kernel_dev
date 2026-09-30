@@ -4,3 +4,15 @@ example: rdtsc
 likely(x) 
 unlikely(x) 
 Thời gian thực thi (Runtime) — GIẢM ĐÁNG KỂ (Chương trình chạy nhanh hơn)
+
+
+cach tao fork =>
+ham fork() , __clone() , vfork() deu goi den clone() => clone() goi den do_fork() trong kernel/fork.c => goi copy_process() => goi dup_task_struct() => create stack struct thread_info ; task_struct  => kiem tra xem dung qua tai nguyen hay
+
+**Luu y ** tren linux tien trinh con se chay truoc cha de tranh copy on write 
+
+vfork() giong fork() nhung bang ko bi sao chep , tien trinh con chay trong tien trinh cha , bien trinh cha se bi block den khi chay exit() 
+
+
+process termination (cham dut tien trinh)
+bat co thoat , huy bo dem thoi gian , giai phong bo nho , huy ket noi ipc , dong tep , luu ma thoat  , bao cao trang thai 
